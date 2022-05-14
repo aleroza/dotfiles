@@ -15,7 +15,7 @@ autoload -U colors && colors
 # Load and execute the prompt theming system.
 fpath=("$curr/terminal" $fpath)
 autoload -Uz promptinit && promptinit
-prompt 'paulmillr'
+prompt 'aleroza'
 
 # The icrnl setting tells the terminal driver in the kernel to convert the CR character to LF on input. This way, applications only need to worry about one newline character; the same newline character that ends lines in files also ends lines of user input on the terminal, so the application doesn't need to have a special case for that.
 # Fixes <Return> key bugs with some secure keyboards etc
@@ -25,6 +25,10 @@ export GPG_TTY=$(tty) # For git commit signing
 # ==================================================================
 # = Aliases =
 # ==================================================================
+ls='ls -aF --color=auto'
+ll='ls -laF --color=auto'
+cleaning='yay -Qtdq | yay -Rns -'
+
 # Simple clear command.
 alias cl='clear'
 
